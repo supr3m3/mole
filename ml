@@ -243,14 +243,7 @@ def init(
             # Should reverse-proxy always be included even under lite mode?
             SERVICES.discard("proxy")
             SERVICES.discard("event_generator")
-            SERVICES.discard("zookeeper1")
-            SERVICES.discard("zookeeper2")
-            SERVICES.discard("zookeeper3")
-            SERVICES.discard("bookkeeper1")
-            SERVICES.discard("bookkeeper2")
-            SERVICES.discard("bookkeeper3")
             SERVICES.discard("pulsar")
-            SERVICES.discard("pulsar_proxy")
         if not db_backup:
             SERVICES.discard("db_backup")
         if not angular or skip_static_build:
@@ -330,14 +323,7 @@ def run(
         # Should reverse-proxy always be included even under lite mode?
         SERVICES.discard("proxy")
         SERVICES.discard("event_generator")
-        SERVICES.discard("zookeeper1")
-        SERVICES.discard("zookeeper2")
-        SERVICES.discard("zookeeper3")
-        SERVICES.discard("bookkeeper1")
-        SERVICES.discard("bookkeeper2")
-        SERVICES.discard("bookkeeper3")
         SERVICES.discard("pulsar")
-        SERVICES.discard("pulsar_proxy")
 
     if not db_backup:
         SERVICES.discard("db_backup")
