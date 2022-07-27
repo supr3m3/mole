@@ -25,6 +25,7 @@ nav:
       - User Interface: developer_angular.md
       - Angular Testing: developer_angular_testing.md
       - Migrations: developer_migrations.md
+      - OpenAPI Schema: developer_schema.md
 theme:
   name: 'material'
   language: 'en'
