@@ -865,6 +865,7 @@ def docs(serve=True, schema=False, graph_models=False):
             msg = "Generating OpenAPI schema. Waiting for Django service..."
         elif graph_models:
             msg = "Graphing models. Waiting for Django servoce..."
+        
         print(msg)
 
         url = "http://mole.localhost:8000/api/"
@@ -1343,14 +1344,13 @@ if __name__ == "__main__":
         dest="serve",
     )
 
-    ## Schema generation is currently broken. Once it is fixed, this will be enabled.
-    # docs_parser.add_argument(
-    #     "-s",
-    #     "--generate-schema",
-    #     help="Generate an OpenAPI Schema.",
-    #     action="store_true",
-    #     dest="schema",
-    # )
+    docs_parser.add_argument(
+        "-s",
+        "--generate-schema",
+        help="Generate an OpenAPI Schema.",
+        action="store_true",
+        dest="schema",
+    )
 
     docs_parser.add_argument(
         "-g",
